@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--for selectable backdrop animation effect-->
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/item"
+        android:background="#BDBDBD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!--to hold the details-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:layout_marginBottom="0.5dp"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+        <!--MP / Policy name-->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/heading"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+
+        <!--MP party / policy topic (data category)-->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/category"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"/>
+
+        <!--MP constituency / policy support %-->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail1"
+                android:textColor="#696969"
+                android:textSize="15sp"/>
+
+        <!--MP position-->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail2"
+                android:textColor="#696969"
+                android:textSize="15sp"/>
+
+        <!--user policy position selection-->
+        <android.widget.Spinner
+                android:id="@+id/choice"
+                android:gravity="left"
+                android:title="Choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

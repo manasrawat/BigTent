@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--scrollable if too many MPs with equal closeness to fit dialog-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/closestScroll">
+
+    <!--base layout from which other views are dynamically referenced-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/base">
+
+        <!--To show user's position-->
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/black"
+                  android:textSize="20dp"
+                  android:textStyle="bold"/>
+
+        <!--economically closest MPs title-->
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="20dp"
+                  android:textSize="15dp"
+                  android:textStyle="italic"
+                  android:text="Economically"/>
+
+        <!--to show economically closest MP(s)-->
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+        </LinearLayout>
+
+        <!--socially closest MPs title-->
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="20dp"
+                  android:textSize="15dp"
+                  android:textStyle="italic"
+                  android:text="Socially"/>
+
+        <!--to show socially closest MP(s)-->
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

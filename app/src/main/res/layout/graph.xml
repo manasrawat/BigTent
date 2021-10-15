@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!--holds various positions (coordinates)-->
+    <RelativeLayout
+            android:id="@+id/pinpoint"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+        <!--MP position-->
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/holo_red_dark"
+                  android:id="@+id/MP"
+                  android:layout_marginBottom="0.5dp"/>
+
+        <!--Party position-->
+        <TextView android:textColor="@android:color/holo_orange_dark"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/party"
+                  android:layout_below="@id/MP"
+                  android:layout_marginBottom="0.5dp"/>
+
+        <!--User position-->
+        <TextView android:textColor="@android:color/black"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/User"
+                  android:layout_below="@id/party"/>
+    </RelativeLayout>
+
+    <!--For graph and its backdrop-->
+    <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_below="@id/pinpoint">
+
+        <!--Graph; transparent background-->
+        <com.jjoe64.graphview.GraphView
+                android:layout_centerInParent="true"
+                android:id="@+id/gv"
+                android:layout_height="350dp"
+                android:layout_width="350dp">
+        </com.jjoe64.graphview.GraphView>
+
+        <!--4-quadrant-colour background-->
+        <ImageView android:layout_centerInParent="true"
+                   android:scaleType="fitXY"
+                android:layout_width="350dp"
+                   android:layout_height="350dp"
+                   android:src="@drawable/compassbackdrop"/>
+    </RelativeLayout>
+</RelativeLayout>
